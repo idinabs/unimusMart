@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TambahDataMart"
+    android:layout_margin="10dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/judulLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:textSize="20dp"
+                android:layout_marginTop="50dp"
+                android:textColor="@color/black"
+                android:text="Silahkan Tambah Data Mart"/>
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_sampul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:layout_below="@id/judulLayout"
+                android:layout_marginTop="15dp"
+                app:shapeAppearanceOverlay="@style/roundeImage"/>
+
+
+            <EditText
+                android:id="@+id/namaBarang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nama Barang"
+                android:layout_marginTop="50dp"
+                android:layout_below="@id/img_sampul"/>
+
+
+            <EditText
+                android:id="@+id/deskripsiBarang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Deskripsi Barang"
+                android:layout_below="@id/namaBarang"/>
+
+
+            <EditText
+                android:id="@+id/jumlahBarang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Jumlah Barang"
+                android:layout_below="@id/deskripsiBarang"/>
+
+            <EditText
+                android:id="@+id/hargaBarang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Harga Barang"
+                android:layout_below="@id/jumlahBarang"/>
+
+            <Button
+                android:id="@+id/btn_tambah_produk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tambah Data"
+                android:layout_below="@id/hargaBarang"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
